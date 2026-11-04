@@ -1,0 +1,39 @@
+name: Build LevelPvP Plugin
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Java 25 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+          cache: gradle
+
+      - name: Gradle-Wrapper ausführbar machen
+        run: chmod +x ./gradlew
+
+      - name: Plugin bauen
+        run: ./gradlew --no-daemon clean build
+
+      - name: JAR als Artifact hochladen
+        uses: actions/upload-artifact@v4
+        with:
+          name: LevelPvP-Paper-26.2
+          path: build/libs/*.jar
+          if-no-files-found: error
+          retention-days: 14
