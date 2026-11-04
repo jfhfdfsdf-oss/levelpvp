@@ -2,7 +2,7 @@ package de.levelpvp;
 
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
-import org.bukkit.ban.BanList;
+import org.bukkit.BanList;
 import org.bukkit.command.*;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
