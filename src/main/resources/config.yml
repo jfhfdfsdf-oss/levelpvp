@@ -1,0 +1,9 @@
+# LevelPvP – Standardkonfiguration
+settings:
+  min-level: -10
+  max-level: 30
+  negative-xp-minimum: 0.10
+  ban-at-min-level: true
+  stats-title: '&8Spieler-Statistik'
+  soul-gui-title: '&8Seelenbefreiung'
+  confirm-title: '&8Entbannung bestätigen'
