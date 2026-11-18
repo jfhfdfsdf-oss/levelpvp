@@ -1,0 +1,12 @@
+name: LevelPvP
+version: '${version}'
+main: de.levelpvp.LevelPvPPlugin
+api-version: '26.2'
+commands:
+  stats: { description: Zeigt deine LevelPvP-Statistiken }
+  levelcap: { description: Setzt das Level-Limit, permission: levelpvp.admin }
+  levelpvp: { description: Adminbefehle, permission: levelpvp.admin }
+  extract: { description: Speichert Level in einer Flasche }
+  delivery: { description: Öffnet das Liefermenü }
+permissions:
+  levelpvp.admin: { default: op }
