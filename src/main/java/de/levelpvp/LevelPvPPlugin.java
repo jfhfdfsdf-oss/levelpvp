@@ -344,7 +344,7 @@ public final class LevelPvPPlugin extends JavaPlugin implements Listener, Comman
                 if(lvl-amount < -10) { p.sendMessage(ChatColor.RED+"Du kannst nicht unter Level -10 gehen."); return true; }
                 setLevel(p,lvl-amount); int left=amount;
                 while(left>0) { int stack=Math.min(64,left); p.getInventory().addItem(makeBottle(stack)); left-=stack; }
-                p.sendMessage(ChatColor.GREEN+amount+" Level wurden in Level in a Bottle umgewandelt.");
+               p.sendMessage(ChatColor.GREEN.toString() + amount + " Level wurden in Level in a Bottle umgewandelt.");
             } catch(NumberFormatException ex) { p.sendMessage(ChatColor.RED+"Bitte gib eine positive ganze Zahl an."); } return true;
         }
         if(!sender.isOp()) { sender.sendMessage(ChatColor.RED+"Dafür brauchst du Operator-Rechte."); return true; }
