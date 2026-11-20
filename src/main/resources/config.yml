@@ -1,0 +1,2 @@
+# Default global maximum level. Can also be changed in-game with /levelcap.
+global-cap: 20

@@ -1,0 +1,36 @@
+name: LevelPvP
+version: 1.0.0
+main: de.levelpvp.LevelPvPPlugin
+api-version: '26.2'
+author: LevelPvP
+description: Custom PvP levels, delivery, and level items
+commands:
+  delivery:
+    description: Opens the delivery menu
+    usage: /delivery
+  withdraw:
+    description: Converts levels into Level in a Bottle items
+    usage: /withdraw <amount>
+  stats:
+    description: Shows your LevelPvP statistics
+    usage: /stats
+  levelcap:
+    description: Changes the global or a player's level cap
+    usage: /levelcap <amount|player amount|player reset>
+    permission: levelpvp.admin
+  setlevel:
+    description: Sets a player's level
+    usage: /setlevel <player> <level>
+    permission: levelpvp.admin
+  revivestar:
+    description: Opens revive menu or revives a player
+    usage: /revivestar [player]
+    permission: levelpvp.admin
+  levelpvp:
+    description: LevelPvP administration
+    usage: /levelpvp reload
+    permission: levelpvp.admin
+permissions:
+  levelpvp.admin:
+    description: Allows LevelPvP administration commands
+    default: op
